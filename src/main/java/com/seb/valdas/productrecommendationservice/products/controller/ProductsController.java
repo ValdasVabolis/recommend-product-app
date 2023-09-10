@@ -29,9 +29,9 @@ public class ProductsController {
     }
 
     @PostMapping("/add")
-    ResponseEntity<Optional<ProductDTO>> addProduct(@RequestBody ProductDTO productDTO) {
+    ResponseEntity<ProductDTO> addProduct(@RequestBody ProductDTO productDTO) {
         try {
-            return ResponseEntity.ok(Optional.of(productsService.createProduct(productDTO)));
+            return ResponseEntity.ok(productsService.createProduct(productDTO));
         } catch (Exception e) {
             System.err.println("Could not add product" + e.getMessage());
             return ResponseEntity.internalServerError().build();
@@ -39,9 +39,9 @@ public class ProductsController {
     }
 
     @GetMapping("/all")
-    ResponseEntity<Optional<List<ProductDTO>>> getAllProducts() {
+    ResponseEntity<List<ProductDTO>> getAllProducts() {
         try {
-            return ResponseEntity.ok(Optional.of(productsService.findAll()));
+            return ResponseEntity.ok(productsService.findAll());
         } catch (Exception e) {
             System.err.println("Could not fetch products" + e.getMessage());
             return ResponseEntity.internalServerError().build();

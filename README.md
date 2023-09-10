@@ -1,7 +1,7 @@
 # RecommendProductApp backend service
 
 ### Getting started
-Build the application using ``gradle build`` command. Then, run [ProductRecommendationServiceApplication.java](src%2Fmain%2Fjava%2Fcom%2Fseb%2Fvaldas%2Fproductrecommendationservice%2FProductRecommendationServiceApplication.java) via IntelliJ (recommended) or your other favorite run environment.
+Build the application using ``gradle build`` command, then run using ``gradle bootRun``. OR, just use IntelliJ and run [ProductRecommendationServiceApplication.java](src%2Fmain%2Fjava%2Fcom%2Fseb%2Fvaldas%2Fproductrecommendationservice%2FProductRecommendationServiceApplication.java) (recommended) or your other favorite run environment.
 
 ### Available endpoints
 
