@@ -57,6 +57,7 @@ public class ProductsService {
         if (range.endsWith("+")) {
             range = range.substring(0, range.length() - 1);
             parsedRange.setLowerBound(Long.valueOf(range));
+            parsedRange.setUpperBound(Long.MAX_VALUE);
             return parsedRange;
         }
 
@@ -67,6 +68,7 @@ public class ProductsService {
         }
 
         parsedRange.setLowerBound(Long.valueOf(range));
+        parsedRange.setUpperBound(Long.valueOf(range));
         return parsedRange;
     }
 }
